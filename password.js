@@ -1,1 +1,1 @@
-const correctPassword = "hogosha2026";
+const correctPassword = "tcmnpt";
