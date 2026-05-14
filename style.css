@@ -1,0 +1,137 @@
+/* ===== 全体設定 ===== */
+
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* ===== ログイン画面 ===== */
+
+#login-area{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* ===== メインページ初期非表示 ===== */
+
+#main-content{
+    display:none;
+}
+
+/* ===== ログインボックス ===== */
+
+.login-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    text-align:center;
+    width:300px;
+}
+
+.login-box h1{
+    margin-bottom:20px;
+    color:#2f80ed;
+}
+
+/* ===== 入力欄 ===== */
+
+input{
+    width:90%;
+    padding:12px;
+    font-size:16px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+/* ===== ボタン ===== */
+
+button{
+    background:#2f80ed;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    background:#1366d6;
+}
+
+/* ===== エラーメッセージ ===== */
+
+.error{
+    color:red;
+    margin-top:10px;
+}
+
+/* ===== ヘッダー ===== */
+
+header{
+    background:#2f80ed;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* ===== メインエリア ===== */
+
+.container{
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+}
+
+/* ===== ボタンエリア ===== */
+
+.button-area{
+    display:grid;
+    gap:20px;
+}
+
+/* ===== リンクボタン ===== */
+
+.link-button{
+    display:block;
+    text-decoration:none;
+    background:white;
+    color:#2f80ed;
+    padding:22px;
+    border-radius:14px;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    border-left:8px solid #2f80ed;
+    transition:0.2s;
+}
+
+.link-button:hover{
+    background:#eef5ff;
+    transform:translateY(-3px);
+}
+
+/* ===== フッター ===== */
+
+footer{
+    text-align:center;
+    color:#777;
+    margin:40px 0 20px;
+}
