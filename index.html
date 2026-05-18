@@ -4,10 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>保護者専用ページ</title>
 
-<!-- CSS読み込み -->
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,43 +13,33 @@
 <body>
 
 <!-- ===== ログイン画面 ===== -->
-
 <div id="login-area">
 
     <div class="login-box">
-
         <h1>保護者専用</h1>
 
         <input
             type="password"
             id="password"
-            placeholder="パスワードを入力">
+            placeholder="パスワードを入力"
+            onkeydown="if(event.key==='Enter'){checkPassword()}">
 
         <button onclick="checkPassword()">
             ログイン
         </button>
 
-        <div
-            class="error"
-            id="error-message">
-        </div>
-
+        <div class="error" id="error-message"></div>
     </div>
 
 </div>
 
-<!-- ===== メイン画面 ===== -->
 
+<!-- ===== メイン画面 ===== -->
 <div id="main-content">
 
 <header>
-
     <h1>保護者専用ページ</h1>
-
-    <p>
-        各学年のスケジュール・学校イベント
-    </p>
-
+    <p>各学年のスケジュール・学校イベント</p>
 </header>
 
 <main class="container">
@@ -59,43 +47,25 @@
     <div class="button-area">
 
         <!-- 1年 -->
-
-        <a
-            class="link-button"
-            href="https://jikeiwest-my.sharepoint.com/:x:/g/personal/j-doi_class_tcmn_ac_jp/IQD_9QgSAPSgRbS4fWt1rBPUAZrvvfALHQYYBvlcxEfHsQI?e=Akviyg">
-
-            1年生スケジュール
-
+        <a class="link-button"
+           href="https://jikeiwest-my.sharepoint.com/:x:/g/personal/j-doi_class_tcmn_ac_jp/IQD_9QgSAPSgRbS4fWt1rBPUAZrvvfALHQYYBvlcxEfHsQI?e=Akviyg"
+           target="_blank">
+            📘 1年生スケジュール
         </a>
 
         <!-- 2年 -->
-
-        <a
-            class="link-button"
-            href="2年生URL">
-
-            2年生スケジュール
-
+        <a class="link-button disabled">
+            📗 2年生スケジュール（準備中）
         </a>
 
         <!-- 3年 -->
-
-        <a
-            class="link-button"
-            href="3年生URL">
-
-            3年生スケジュール
-
+        <a class="link-button disabled">
+            📙 3年生スケジュール（準備中）
         </a>
 
-        <!-- 学校イベント -->
-
-        <a
-            class="link-button"
-            href="イベントURL">
-
-            学校イベント
-
+        <!-- イベント -->
+        <a class="link-button disabled">
+            🎉 学校イベント（準備中）
         </a>
 
     </div>
@@ -103,20 +73,15 @@
 </main>
 
 <footer>
-
     © 保護者専用ページ
-
 </footer>
 
 </div>
 
-<!-- password.js読み込み -->
+<!-- password.js -->
 <script src="password.js?v=2"></script>
 
-<!-- ログイン判定 -->
-
 <script>
-
 function checkPassword(){
 
     const inputPassword =
@@ -124,20 +89,13 @@ function checkPassword(){
 
     if(inputPassword === correctPassword){
 
-        document.getElementById("login-area")
-            .style.display = "none";
-
-        document.getElementById("main-content")
-            .style.display = "block";
+        document.getElementById("login-area").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
 
     }else{
-
-        document.getElementById("error-message")
-            .innerText = "パスワードが違います";
-
+        document.getElementById("error-message").innerText = "パスワードが違います";
     }
 }
-
 </script>
 
 </body>
